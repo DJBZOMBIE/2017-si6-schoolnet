@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>SchoolNet</h1>
+    <select name="" id="">
+        <option value="">Choose a name</option>
+        <% students.forEach(student => {%>
+            <option><%=student.name%></option>
+        <%}) %>
+        
+    </select>
 </body>
 </html>
