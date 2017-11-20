@@ -8,12 +8,16 @@
 </head>
 <body>
     <h1>SchoolNet</h1>
-    <select name="" id="">
-        <option value="">Choose a name</option>
-        <% students.forEach(student => {%>
-            <option><%=student.name%></option>
-        <%}) %>
-        
-    </select>
+    <form action="/status" method="GET">
+        <input type="text" name="studentId">
+        <input type="submit" value="Ok">
+    </form>
+    <% if(student) { %>
+        <p>Name: <%= student.name %></p>
+        <p>Average: <%= student.average %></p>
+        <p>Status: <%= student.status %></p>
+    <% } else if(submitted) { %>
+        <p>Student not found</p>
+    <% } %>
 </body>
 </html>
