@@ -21,15 +21,14 @@
     <% } %>-->
         <h1>Pokemons</h1>
         <form action="/status" method="GET">
-             <input type="text" name="pokenId">
-             <input type="submit" value="Ok">
-
-
+            <input type="text" name="pokenId">
+            <input type="submit" value="Ok">
         </form>
-         <% if(pokemon){ %>
-                <p>Name: <% = pokemon.name %></P>
-             <% }else{ %>
-                <p>Pokemon not found</p>
-            <% } %>
+        
+        if(pokemon) { %>
+        <p>Name: <%= pokemon.name %></p>
+    <% } else if(submitted) { %>
+        <p>pokemon not found</p>
+    <% } %>
 </body>
 </html>

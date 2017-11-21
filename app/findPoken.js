@@ -15,6 +15,9 @@ const pokemon = pokemons.find(findPokenID)
 module.exports = {
     getPokemonStatus(id){
         let pokemon = pokemons.find(pokemon => pokemon.id == id) //(pokemon = parametro => corpo da função(return))
-      
+       if(pokemon){
+
+       }
+        return pokemon
     }
 }
