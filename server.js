@@ -13,16 +13,19 @@ app.set('views', path.join(__dirname, 'public'))
 app.set('view engine', 'ejs')
 
 app.get('/', (request, response) => {
-    const data = { student:null, submitted:false }
+    //const data = { student:null, submitted:false }
+    const data = { pokemon:null, submitted:false }
     response.render('index', data)
 })
 
 app.get('/status', (request, response) => {
-    const { getStudentStatus } = require('./app/check-students')
-    studentStatus = getStudentStatus(request.query.studentId)
+   // const { getStudentStatus } = require('./app/check-students')
+   // studentStatus = getStudentStatus(request.query.studentId)
+    const { getPokemonStatus } = require('./app/findPoken')
+    pokenStatus = getPokemonStatus(request.query.pokenId)
     
     const data = {
-        student: studentStatus,
+        pokemon: pokenStatus,
         submitted: true
     }
 
