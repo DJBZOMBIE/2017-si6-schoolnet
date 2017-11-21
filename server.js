@@ -19,10 +19,10 @@ app.get('/', (request, response) => {
 })
 
 app.get('/status', (request, response) => {
-   // const { getStudentStatus } = require('./app/check-students')
-   // studentStatus = getStudentStatus(request.query.studentId)
-    const { getPokemonStatus } = require('./app/findPoken')
-    pokenStatus = getPokemonStatus(request.query.pokenId)
+   //const { getStudentStatus } = require('./app/check-students')
+  // studentStatus = getStudentStatus(request.query.studentId)
+   const { getPokemonStatus } = require('./app/findPoken')
+   pokenStatus = getPokemonStatus(request.query.pokenId)
     
     const data = {
         pokemon: pokenStatus,

@@ -7,28 +7,17 @@
     <title>SchoolNet</title>
 </head>
 <body>
-   <!-- <h1>SchoolNet</h1>
+    <h1>Pokemon</h1>
     <form action="/status" method="GET">
-        <input type="text" name="studentId">
+        <input type="text" name="pokenId">
         <input type="submit" value="Ok">
     </form>
-     if(student) { %>
-        <p>Name: <%= student.name %></p>
-        <p>Average: <%= student.average %></p>
-        <p>Status: <%= student.status %></p>
-    <% } else if(submitted) { %>
-        <p>Student not found</p>
-    <% } %>-->
-        <h1>Pokemons</h1>
-        <form action="/status" method="GET">
-            <input type="text" name="pokenId">
-            <input type="submit" value="Ok">
-        </form>
-        
-        if(pokemon) { %>
+    <% if(pokemon) { %>
         <p>Name: <%= pokemon.name %></p>
     <% } else if(submitted) { %>
-        <p>pokemon not found</p>
+        <p>Student not found</p>
     <% } %>
+
+  
 </body>
 </html>
