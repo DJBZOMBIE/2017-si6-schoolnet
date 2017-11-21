@@ -12,7 +12,7 @@
         <input type="text" name="studentId">
         <input type="submit" value="Ok">
     </form>
-    <% if(student) { %>
+     if(student) { %>
         <p>Name: <%= student.name %></p>
         <p>Average: <%= student.average %></p>
         <p>Status: <%= student.status %></p>
@@ -21,10 +21,15 @@
     <% } %>-->
         <h1>Pokemons</h1>
         <form action="/status" method="GET">
-             <input type="text" name="studentId">
+             <input type="text" name="pokenId">
              <input type="submit" value="Ok">
 
-             
+
         </form>
+         <% if(pokemon){ %>
+                <p>Name: <% = pokemon.name %></P>
+             <% }else{ %>
+                <p>Pokemon not found</p>
+            <% } %>
 </body>
 </html>
